@@ -1,2 +1,7 @@
-#good morning, this is a test python file
-#this is where i will write the code for the first homework assignment for CS480
+####################################################
+#   Code for CS480 homework1
+#   Author: Cole Zandbergen
+####################################################
+
+filepath = input("Enter the filepath for the folder containing your CSV files: ")
+
