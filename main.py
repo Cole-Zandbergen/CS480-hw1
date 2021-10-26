@@ -5,7 +5,7 @@
 
 import csv
 import matplotlib.pyplot as plt
-from math import radians, cos, sin, asin, sqrt
+from math import radians, cos, sin, asin, sqrt, degrees
 import datetime
 
 #filepath = input("Enter the filepath for the folder containing your CSV files: ")
@@ -27,7 +27,7 @@ Magnetic = open(filepath + '/sensoringData_magn.csv')
 
 def haversine(lat1, lon1, lat2, lon2): #distance function, copied from stackoverflow
 
-      R = 6372.8 # this is in miles.  For Earth radius in kilometers use 6372.8 km
+      R = 6372.8 # kilometers, total radius of earth --- i think
 
       dLat = radians(lat2 - lat1)
       dLon = radians(lon2 - lon1)
@@ -66,7 +66,11 @@ class Suspect:
 
 		#NEW METHOD
 		for row in reversed(self.data): #loop through the *reversed* list, since we must start from the ending location
-			newLocation = [self.currentLocation[0] - float(row[3]), self.currentLocation[1] - float(row[4])]
+
+			bearing = float(row[7])
+			latinc = cos(radians(bearing)) * float(row[3])
+			longinc = sin(radians(bearing)) * float(row[4])
+			newLocation = [self.currentLocation[0] - latinc, self.currentLocation[1] - longinc]
 			self.locationPlot[row[2]] = newLocation
 			self.currentLocation = newLocation
 
