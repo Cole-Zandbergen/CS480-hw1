@@ -68,8 +68,8 @@ class Suspect:
 		for row in reversed(self.data): #loop through the *reversed* list, since we must start from the ending location
 
 			bearing = float(row[7])
-			latinc = cos(radians(bearing)) * float(row[3])
-			longinc = sin(radians(bearing)) * float(row[4])
+			latinc = sin(radians(bearing)) * float(row[3])
+			longinc = cos(radians(bearing)) * float(row[4])
 			newLocation = [self.currentLocation[0] - latinc, self.currentLocation[1] - longinc]
 			self.locationPlot[row[2]] = newLocation
 			self.currentLocation = newLocation
