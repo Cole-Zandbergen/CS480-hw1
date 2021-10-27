@@ -43,6 +43,21 @@ def adjustLocation(start, end):
 	l = [start[0] + end[0], start[1] + end[1]]
 	return l
 
+def findClose(suspects):
+	
+	for i in range(0, len(suspects)):
+		for j in range(i+1, len(suspects)):
+			for iTime in suspects[i].locationPlot:
+				#print("checking i time " + iTime)
+				for jTime in suspects[j].locationPlot:
+					#print("checking j time " + jTime)
+					diff = float(iTime) - float(jTime)
+					if abs(diff) < 3600:
+						if haversine(suspects[i].locationPlot.get(iTime)[0], suspects[i].locationPlot.get(iTime)[1], suspects[j].locationPlot.get(jTime)[0], suspects[j].locationPlot.get(jTime)[1]) < 0.1:
+							print("Suspect " + suspects[i].name + " and " + suspects[j].name + " were close on " + str(datetime.datetime.fromtimestamp(float(iTime))))
+					elif diff > 3600:
+						break
+
 #lets create a class to store suspects
 class Suspect:
 	def __init__(self, name, endingLocation, num):
@@ -141,7 +156,8 @@ for row in reader:
 
 for s in suspects: #now get each suspect to create its location data dict
 	s.plotGPSData()
-	#s.findSuspectsAtSameTime(suspects)
+
+#findClose(suspects)
 
 '''with open(outpath+"/output.csv", 'w') as outfile:
 	writer = csv.DictWriter(outfile, fieldnames=['Suspect', 'Close Suspect', 'Suspect Time', 'Close Suspect Time', 'Time Difference', 'Distance'])
@@ -149,10 +165,21 @@ for s in suspects: #now get each suspect to create its location data dict
 	for s in suspects:
 		writer.writerows(s.closeSuspects)'''
 
-with open(outpath+"/suspectLocationPlot.csv", 'w') as outfile:
+'''with open(outpath+"/suspectLocationPlot.csv", 'w') as outfile:
 	w = csv.DictWriter(outfile, fieldnames=['ID', 'time', 'lat', 'long'])
 	w.writeheader()
 	for s in suspects:
-		w.writerows(s.plotData)
+		w.writerows(s.plotData)'''
+
+
+###
+# code to print the generated GPS plot from 18 and 12 to a csv file
+###
+with open(outpath+"/18and12.csv", 'w') as outfile:
+	w = csv.DictWriter(outfile, fieldnames=['ID', 'time', 'lat', 'long'])
+	w.writeheader()
+	for s in suspects:
+		if s.name == '18' or s.name == '12':
+			w.writerows(s.plotData)
 
 GPS.close()
