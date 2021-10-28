@@ -70,6 +70,7 @@ class Suspect:
 		self.closeids = []
 		self.closeSuspects = []
 		self.placeInList = num
+		self.rawData = []
 
 	def plotGPSData(self): #add a row of data to this suspect's list of data, it will need to be added in order of last timestamp first
 		#we will assume that the data is in order from least to greatest timestamp, and add each piece of information to the front of the list
@@ -100,6 +101,9 @@ class Suspect:
 	def addData(self, row):
 		self.data.append(row)
 		#print("data added for " + str(self.name))
+	
+	def addTextLine(self, line):
+		self.rawData.append(line)
 
 	def findSuspectsAtSameTime(self, list):
 		for s in list:
@@ -127,35 +131,45 @@ class Suspect:
 								newDict['Time Difference'] = abs(float(t) - float(p))
 								self.closeSuspects.append(newDict)
 
-		
+def initializeSuspectObjects():
+	#this will read the GPS file
+	rows = []
+	suspects = []
 
+	reader = csv.reader(GPS)
+	
+	counter = 0
+	for row in reader:
+		inList = False #boolean to keep track of whether this suspect has already been added to the list
+		suspect = None #initialize new suspect object
+		for s in suspects:
+			if s.name == row[1]:
+				inList = True #set inlist to true if we don't need to create a new player
+				suspect = s
 
+		if not inList:
+			suspect = Suspect(row[1], [43.33352346016208, -8.40940731683987], counter)
+			suspects.append(suspect) #create new suspect and add him to our list
+			counter += 1
 
+		suspect.addData(row)
 
-#this will read the GPS file
-rows = []
-suspects = []
+	return suspects
 
-reader = csv.reader(GPS)
-header = next(reader)
-counter = 0
-for row in reader:
-	inList = False #boolean to keep track of whether this suspect has already been added to the list
-	suspect = None #initialize new suspect object
+def plotSuspectGPSData(suspects):
+	for s in suspects: #now get each suspect to create its location data dict
+		s.plotGPSData()
+
+#function to return a suspect from a list with the specified name
+def getSuspectByName(name, suspects):
 	for s in suspects:
-		if s.name == row[1]:
-			inList = True #set inlist to true if we don't need to create a new player
-			suspect = s
+		if(s.name == name):
+			return s
 
-	if not inList:
-		suspect = Suspect(row[1], [43.33352346016208, -8.40940731683987], counter)
-		suspects.append(suspect) #create new suspect and add him to our list
-		counter += 1
 
-	suspect.addData(row)
+suspects = initializeSuspectObjects()
+plotSuspectGPSData(suspects)
 
-for s in suspects: #now get each suspect to create its location data dict
-	s.plotGPSData()
 
 #findClose(suspects)
 
@@ -175,11 +189,9 @@ for s in suspects: #now get each suspect to create its location data dict
 ###
 # code to print the generated GPS plot from 18 and 12 to a csv file
 ###
-with open(outpath+"/18and12.csv", 'w') as outfile:
+'''with open(outpath+"/18and12.csv", 'w') as outfile:
 	w = csv.DictWriter(outfile, fieldnames=['ID', 'time', 'lat', 'long'])
 	w.writeheader()
 	for s in suspects:
 		if s.name == '18' or s.name == '12':
-			w.writerows(s.plotData)
-
-GPS.close()
+			w.writerows(s.plotData)'''
