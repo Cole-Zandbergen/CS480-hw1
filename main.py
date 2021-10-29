@@ -15,11 +15,11 @@ import datetime
 filepath = "/Users/colezandbergen/Desktop/fall 2021/CS480/homework/hw1/code/data_raw"
 outpath = "/Users/colezandbergen/Desktop/github/CS480-hw1"
 
-ActivityChanges = open(filepath + '/activityChanges.csv', 'r')
-ACC = open(filepath + '/sensoringData_acc.csv')
-GPS = open(filepath + '/sensoringData_gps.csv')
-Gyro = open(filepath + '/sensoringData_gyro.csv')
-Magnetic = open(filepath + '/sensoringData_magn.csv')
+ActivityChanges = filepath + '/activityChanges.csv', 'r'
+ACC = filepath + '/sensoringData_acc.csv'
+GPS = filepath + '/sensoringData_gps.csv'
+Gyro = filepath + '/sensoringData_gyro.csv'
+Magnetic = filepath + '/sensoringData_magn.csv'
 
 ##########
 #	First, we need to find out if one or more suspects were within 100 meters of each other at any given time
@@ -133,28 +133,27 @@ class Suspect:
 
 def initializeSuspectObjects():
 	#this will read the GPS file
-	rows = []
-	suspects = []
+	with open(GPS) as gpsFile:
+		suspects = []
+		reader = csv.reader(gpsFile)
+		reader.next()
+		counter = 0
+		for row in reader:
+			inList = False #boolean to keep track of whether this suspect has already been added to the list
+			suspect = None #initialize new suspect object
+			for s in suspects:
+				if s.name == row[1]:
+					inList = True #set inlist to true if we don't need to create a new player
+					suspect = s
 
-	reader = csv.reader(GPS)
-	
-	counter = 0
-	for row in reader:
-		inList = False #boolean to keep track of whether this suspect has already been added to the list
-		suspect = None #initialize new suspect object
-		for s in suspects:
-			if s.name == row[1]:
-				inList = True #set inlist to true if we don't need to create a new player
-				suspect = s
+			if not inList:
+				suspect = Suspect(row[1], [43.33352346016208, -8.40940731683987], counter)
+				suspects.append(suspect) #create new suspect and add him to our list
+				counter += 1
 
-		if not inList:
-			suspect = Suspect(row[1], [43.33352346016208, -8.40940731683987], counter)
-			suspects.append(suspect) #create new suspect and add him to our list
-			counter += 1
+			suspect.addData(row)
 
-		suspect.addData(row)
-
-	return suspects
+		return suspects
 
 def plotSuspectGPSData(suspects):
 	for s in suspects: #now get each suspect to create its location data dict
