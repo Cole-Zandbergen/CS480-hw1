@@ -136,7 +136,7 @@ def initializeSuspectObjects():
 	with open(GPS) as gpsFile:
 		suspects = []
 		reader = csv.reader(gpsFile)
-		reader.next()
+		next(reader)
 		counter = 0
 		for row in reader:
 			inList = False #boolean to keep track of whether this suspect has already been added to the list
