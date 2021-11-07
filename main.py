@@ -15,7 +15,7 @@ import datetime
 filepath = "/Users/colezandbergen/Desktop/fall 2021/CS480/homework/hw1/code/data_raw"
 outpath = "/Users/colezandbergen/Desktop/github/CS480-hw1"
 
-ActivityChanges = filepath + '/activityChanges.csv', 'r'
+ActivityChanges = filepath + '/activityChanges.csv'
 ACC = filepath + '/sensoringData_acc.csv'
 GPS = filepath + '/sensoringData_gps.csv'
 Gyro = filepath + '/sensoringData_gyro.csv'
@@ -90,11 +90,17 @@ class Suspect:
 			self.locationPlot[row[2]] = newLocation
 			self.currentLocation = newLocation
 
-			newRow = {'ID':"", 'time':"", 'lat':"", 'long':""}
+			newRow = {'ID':"", 'time':"", 'lat':"", 'long':"", 'alt_increment':"", 'speed':"", 'bearing':"", 'accuracy':"", 'activity_id':"", 'activity':""}
 			newRow['ID'] = self.name
 			newRow['time'] = datetime.datetime.fromtimestamp(float(row[2]))
 			newRow['lat'] = newLocation[0]
 			newRow['long'] = newLocation[1]
+			newRow['alt_increment'] = row[5]
+			newRow['speed'] = row[6]
+			newRow['bearing'] = row[7]
+			newRow['accuracy'] = row[8]
+			newRow['activity_id'] = row[9]
+			newRow['activity'] = row[10]
 			self.plotData.insert(0, newRow)
 
 
@@ -178,11 +184,11 @@ plotSuspectGPSData(suspects)
 	for s in suspects:
 		writer.writerows(s.closeSuspects)'''
 
-'''with open(outpath+"/suspectLocationPlot.csv", 'w') as outfile:
-	w = csv.DictWriter(outfile, fieldnames=['ID', 'time', 'lat', 'long'])
+with open(outpath+"/suspectLocationPlot.csv", 'w') as outfile:
+	w = csv.DictWriter(outfile, fieldnames=['ID', 'time', 'lat', 'long', 'alt_increment', 'speed', 'bearing', 'accuracy', 'activity_id', 'activity'])
 	w.writeheader()
 	for s in suspects:
-		w.writerows(s.plotData)'''
+		w.writerows(s.plotData)
 
 
 ###

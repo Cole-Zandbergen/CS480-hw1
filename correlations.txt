@@ -1,0 +1,37 @@
+Correlations for the Activity Changes data: 
+Correlation between ('end_timestamp', 'init_timestamp') is 0.9999996896346796
+Correlation between ('activity_id', 'init_timestamp') is 0.9321690291503215
+Correlation between ('activity_id', 'end_timestamp') is 0.9321605461394643
+Correlation between ('init_timestamp', 'id') is 0.9007537808813225
+Correlation between ('end_timestamp', 'id') is 0.9007278963977529
+Correlation between ('activity_id', 'id') is 0.8420586894514401
+
+
+Correlations for the GPS data: 
+Correlation between ('activity_id', 'timestamp') is 0.9647461145063714
+Correlation between ('timestamp', 'id') is 0.9298027498724812
+Correlation between ('activity_id', 'id') is 0.8886634603216644
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.6614674674135433
+Correlation between ('gps_bearing', 'gps_speed') is 0.31065321459522627
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.30364422656722
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3032102059038744
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.3087408954263671
+
+
+Correlations for the ACC data: 
+Correlation between ('activity_id', 'timestamp') is 0.9467417352327628
+Correlation between ('timestamp', 'id') is 0.9119539557445615
+Correlation between ('activity_id', 'id') is 0.8636901273711016
+
+
+Correlations for the Gyro data: 
+Correlation between ('activity_id', 'timestamp') is 0.9433944163137774
+Correlation between ('timestamp', 'id') is 0.8899298500282941
+Correlation between ('activity_id', 'id') is 0.8262380017207436
+
+
+Correlations for the magnetic sensor data: 
+Correlation between ('activity_id', 'timestamp') is 0.9566928592127621
+Correlation between ('timestamp', 'id') is 0.872847628234511
+Correlation between ('activity_id', 'id') is 0.8166938073052237
+Correlation between ('magn_y_axis', 'magn_x_axis') is -0.5533220552229343
