@@ -1,10 +1,4 @@
 Correlations for the Activity Changes data: 
-Correlation between ('end_timestamp', 'init_timestamp') is 0.9999996896346796
-Correlation between ('activity_id', 'init_timestamp') is 0.9321690291503215
-Correlation between ('activity_id', 'end_timestamp') is 0.9321605461394643
-Correlation between ('init_timestamp', 'id') is 0.9007537808813225
-Correlation between ('end_timestamp', 'id') is 0.9007278963977529
-Correlation between ('activity_id', 'id') is 0.8420586894514401
 
 
 Correlations for the GPS data: 
@@ -18,20 +12,364 @@ Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3032102059038744
 Correlation between ('gps_accuracy', 'gps_bearing') is -0.3087408954263671
 
 
-Correlations for the ACC data: 
-Correlation between ('activity_id', 'timestamp') is 0.9467417352327628
-Correlation between ('timestamp', 'id') is 0.9119539557445615
-Correlation between ('activity_id', 'id') is 0.8636901273711016
+For suspect number 11:
+Correlation between ('activity_id', 'timestamp') is 0.9624051231616122
+Correlation between ('timestamp', 'id') is 0.7751019878295691
+Correlation between ('activity_id', 'id') is 0.6849633370149553
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.4836570557917414
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.43113345621858756
+Correlation between ('gps_bearing', 'gps_speed') is 0.3904115105325974
+
+For the user's table with actual location plot points:
+Correlation between ('long', 'lat') is 0.6547766348738709
+Correlation between ('activity_id', 'lat') is 0.531052888352494
+Correlation between ('bearing', 'speed') is 0.3904115105325974
 
 
-Correlations for the Gyro data: 
-Correlation between ('activity_id', 'timestamp') is 0.9433944163137774
-Correlation between ('timestamp', 'id') is 0.8899298500282941
-Correlation between ('activity_id', 'id') is 0.8262380017207436
+For suspect number 1:
+Correlation between ('activity_id', 'id') is 0.9288316640375669
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.8598114623756812
+Correlation between ('activity_id', 'timestamp') is 0.6732817587361754
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.5213678988030833
+Correlation between ('timestamp', 'id') is 0.4366791050570749
+Correlation between ('gps_speed', 'timestamp') is 0.3803729777151661
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.3557838623290842
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3104662730752059
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.6401801818549697
+Correlation between ('speed', 'lat') is 0.3250325167757581
 
 
-Correlations for the magnetic sensor data: 
-Correlation between ('activity_id', 'timestamp') is 0.9566928592127621
-Correlation between ('timestamp', 'id') is 0.872847628234511
-Correlation between ('activity_id', 'id') is 0.8166938073052237
-Correlation between ('magn_y_axis', 'magn_x_axis') is -0.5533220552229343
+For suspect number 18:
+Correlation between ('timestamp', 'id') is 0.9996975800061618
+Correlation between ('gps_accuracy', 'id') is 0.6684487858341613
+Correlation between ('gps_accuracy', 'timestamp') is 0.6679603210062002
+Correlation between ('gps_bearing', 'gps_speed') is 0.48875421307028033
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.4649184014081079
+Correlation between ('gps_speed', 'gps_lat_increment') is 0.4103897140658977
+Correlation between ('gps_long_increment', 'timestamp') is 0.3398525885973166
+Correlation between ('gps_long_increment', 'id') is 0.3369925825030774
+Correlation between ('gps_speed', 'gps_alt_increment') is 0.3214359632051393
+Correlation between ('gps_accuracy', 'gps_bearing') is 0.3145782011963611
+
+For the user's table with actual location plot points:
+Correlation between ('long', 'lat') is 0.7763370991130228
+Correlation between ('accuracy', 'lat') is 0.624248646682073
+Correlation between ('bearing', 'speed') is 0.48875421307028033
+Correlation between ('accuracy', 'long') is 0.4547017319760281
+Correlation between ('speed', 'alt_increment') is 0.3214359632051393
+Correlation between ('accuracy', 'bearing') is 0.3145782011963611
+
+
+For suspect number 17:
+Correlation between ('activity_id', 'id') is 0.9536659963628388
+Correlation between ('activity_id', 'timestamp') is 0.8654293590952834
+Correlation between ('timestamp', 'id') is 0.8061591996419118
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.3917744449095633
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3831671446810167
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.361193693148946
+Correlation between ('activity_id', 'gps_lat_increment') is -0.33846728760048495
+Correlation between ('gps_accuracy', 'timestamp') is -0.3436960918857978
+Correlation between ('gps_lat_increment', 'id') is -0.37826139012497084
+Correlation between ('gps_long_increment', 'timestamp') is -0.3980086283038405
+Correlation between ('gps_accuracy', 'id') is -0.4610892629515965
+Correlation between ('activity_id', 'gps_accuracy') is -0.47367275642742246
+Correlation between ('activity_id', 'gps_long_increment') is -0.5013270927691036
+Correlation between ('gps_long_increment', 'id') is -0.5257279214638091
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9389127210117237
+Correlation between ('accuracy', 'lat') is -0.43836874188587155
+Correlation between ('activity_id', 'accuracy') is -0.47367275642742246
+
+
+For suspect number 9:
+Correlation between ('timestamp', 'id') is 0.9463483912487143
+Correlation between ('activity_id', 'timestamp') is 0.7526510483985405
+Correlation between ('activity_id', 'id') is 0.6652631012409307
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.5133653479524367
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.47975991845743526
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.45411878138752365
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.44618111692572177
+Correlation between ('gps_bearing', 'gps_speed') is 0.3687455712546935
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.3395593762507189
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3122756400943028
+Correlation between ('gps_accuracy', 'gps_speed') is -0.42664102238748197
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.4366104244095232
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.49218429588357876
+Correlation between ('accuracy', 'alt_increment') is 0.45411878138752365
+Correlation between ('bearing', 'speed') is 0.3687455712546935
+Correlation between ('activity_id', 'long') is -0.396457627953886
+Correlation between ('accuracy', 'speed') is -0.42664102238748197
+Correlation between ('long', 'lat') is -0.43102046741785205
+Correlation between ('accuracy', 'bearing') is -0.4366104244095232
+
+
+For suspect number 6:
+Correlation between ('timestamp', 'id') is 0.9746369947082488
+Correlation between ('activity_id', 'id') is 0.9729127245638232
+Correlation between ('activity_id', 'timestamp') is 0.9310501652090101
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.526227607489599
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.4917218254595242
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.376742598014488
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.35500912615671504
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.32202847018085107
+Correlation between ('gps_speed', 'timestamp') is -0.382970636211933
+Correlation between ('gps_speed', 'id') is -0.4123092246578636
+Correlation between ('activity_id', 'gps_speed') is -0.4343809892522114
+
+For the user's table with actual location plot points:
+Correlation between ('long', 'lat') is 0.7070874157909476
+Correlation between ('activity_id', 'lat') is 0.6434672758329384
+Correlation between ('accuracy', 'alt_increment') is 0.4917218254595242
+Correlation between ('activity_id', 'long') is 0.42439276697660555
+Correlation between ('activity_id', 'speed') is -0.4343809892522114
+
+
+For suspect number 7:
+Correlation between ('activity_id', 'timestamp') is 0.9564928555961938
+Correlation between ('timestamp', 'id') is 0.9242474587751005
+Correlation between ('activity_id', 'id') is 0.8940715106654646
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.48266664633254414
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.3821605777308038
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.8837718280540401
+Correlation between ('long', 'lat') is -0.917606146310481
+Correlation between ('activity_id', 'long') is -0.9494178067621238
+
+
+For suspect number 3:
+Correlation between ('timestamp', 'id') is 0.9994318337527948
+Correlation between ('activity_id', 'id') is 0.97031843186709
+Correlation between ('activity_id', 'timestamp') is 0.9676055000728524
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.7225385873774872
+Correlation between ('gps_bearing', 'gps_speed') is 0.6552013592555401
+Correlation between ('gps_accuracy', 'id') is -0.3292261952620136
+Correlation between ('gps_accuracy', 'timestamp') is -0.3344464782264096
+Correlation between ('activity_id', 'gps_speed') is -0.3446347979827214
+Correlation between ('activity_id', 'gps_bearing') is -0.37766958001918555
+Correlation between ('activity_id', 'gps_accuracy') is -0.37909802943708915
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9681465542838048
+Correlation between ('bearing', 'speed') is 0.6552013592555401
+Correlation between ('bearing', 'long') is 0.3567330439296789
+Correlation between ('accuracy', 'long') is 0.34464236493007033
+Correlation between ('activity_id', 'speed') is -0.3446347979827214
+Correlation between ('bearing', 'lat') is -0.3564712068839498
+Correlation between ('activity_id', 'bearing') is -0.37766958001918555
+Correlation between ('activity_id', 'accuracy') is -0.37909802943708915
+Correlation between ('accuracy', 'lat') is -0.40787055213860623
+Correlation between ('activity_id', 'long') is -0.561995327921715
+Correlation between ('long', 'lat') is -0.5851247155830296
+
+
+For suspect number 13:
+Correlation between ('activity_id', 'id') is 0.9911675326377063
+Correlation between ('timestamp', 'id') is 0.9856320259857797
+Correlation between ('activity_id', 'timestamp') is 0.9814976716358756
+Correlation between ('gps_bearing', 'gps_speed') is 0.7329136527376662
+Correlation between ('gps_alt_increment', 'timestamp') is 0.4881409078480713
+Correlation between ('gps_alt_increment', 'id') is 0.47029588126409616
+Correlation between ('activity_id', 'gps_alt_increment') is 0.46096815512421924
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.41741600799902473
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.3756507575567094
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.34885580458686255
+Correlation between ('gps_speed', 'id') is -0.3191766218425069
+Correlation between ('activity_id', 'gps_speed') is -0.3445613601351246
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9559548261604482
+Correlation between ('bearing', 'speed') is 0.7329136527376662
+Correlation between ('long', 'lat') is 0.5660674521368402
+Correlation between ('activity_id', 'long') is 0.5580332968136889
+Correlation between ('alt_increment', 'lat') is 0.4964734027559319
+Correlation between ('activity_id', 'alt_increment') is 0.46096815512421924
+Correlation between ('accuracy', 'long') is 0.3746589487790238
+Correlation between ('speed', 'lat') is -0.3253886336814575
+Correlation between ('activity_id', 'speed') is -0.3445613601351246
+Correlation between ('bearing', 'long') is -0.5251103482383951
+Correlation between ('speed', 'long') is -0.5574808890222062
+
+
+For suspect number 0:
+Correlation between ('timestamp', 'id') is 0.9989445710200393
+Correlation between ('activity_id', 'timestamp') is 0.5479056489898148
+Correlation between ('gps_speed', 'id') is 0.546727788677971
+Correlation between ('gps_speed', 'timestamp') is 0.5461996349285945
+Correlation between ('gps_bearing', 'gps_speed') is 0.5413537148392087
+Correlation between ('activity_id', 'id') is 0.5354666667537546
+Correlation between ('gps_long_increment', 'timestamp') is 0.5256826872976197
+Correlation between ('gps_long_increment', 'id') is 0.5223084501304365
+Correlation between ('gps_speed', 'gps_long_increment') is 0.37544502481337894
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.3631909351517007
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.6317249656526566
+Correlation between ('gps_accuracy', 'gps_speed') is -0.6809975846324832
+
+For the user's table with actual location plot points:
+Correlation between ('speed', 'long') is 0.6491588481244416
+Correlation between ('bearing', 'speed') is 0.5413537148392087
+Correlation between ('activity_id', 'lat') is 0.41681543077388183
+Correlation between ('speed', 'lat') is -0.3677566625220727
+Correlation between ('accuracy', 'bearing') is -0.6317249656526566
+Correlation between ('long', 'lat') is -0.6317284535169506
+Correlation between ('accuracy', 'speed') is -0.6809975846324832
+
+
+For suspect number 10:
+Correlation between ('activity_id', 'timestamp') is 0.9993017332388633
+Correlation between ('activity_id', 'id') is 0.7902612141830776
+Correlation between ('timestamp', 'id') is 0.7852018658281641
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.6866636967424636
+Correlation between ('gps_bearing', 'gps_speed') is 0.6136513508038307
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.3388685719984309
+
+For the user's table with actual location plot points:
+Correlation between ('bearing', 'speed') is 0.6136513508038307
+Correlation between ('activity_id', 'lat') is 0.609668547848861
+Correlation between ('activity_id', 'long') is -0.7182359310780986
+Correlation between ('long', 'lat') is -0.9314667824650883
+
+
+For suspect number 14:
+Correlation between ('activity_id', 'timestamp') is 0.998070986574769
+Correlation between ('timestamp', 'id') is 0.9598472113411062
+Correlation between ('activity_id', 'id') is 0.9407288552893865
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.6738009086363691
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.609008670319789
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.540917430476297
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.35071339931213685
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.3320319762107477
+Correlation between ('gps_accuracy', 'gps_speed') is -0.39255871154954425
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.5349478218048446
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.7058136757056488
+Correlation between ('accuracy', 'alt_increment') is 0.3320319762107477
+Correlation between ('accuracy', 'speed') is -0.39255871154954425
+Correlation between ('accuracy', 'bearing') is -0.5349478218048446
+Correlation between ('activity_id', 'long') is -0.6260188329951722
+Correlation between ('long', 'lat') is -0.8047975996952736
+
+
+For suspect number 8:
+Correlation between ('timestamp', 'id') is 0.976405379104161
+Correlation between ('activity_id', 'timestamp') is 0.9475823180493291
+Correlation between ('activity_id', 'id') is 0.9165246322009059
+Correlation between ('gps_alt_increment', 'gps_long_increment') is 0.5379491416470307
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.5346605718534609
+Correlation between ('gps_bearing', 'gps_speed') is 0.4508271149810128
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.4495841388033987
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.4286594105800721
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.41454576170711516
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.40365329127201816
+
+For the user's table with actual location plot points:
+Correlation between ('long', 'lat') is 0.7309683818430074
+Correlation between ('activity_id', 'long') is 0.5975634196413098
+Correlation between ('activity_id', 'lat') is 0.576106556199964
+Correlation between ('bearing', 'speed') is 0.4508271149810128
+Correlation between ('accuracy', 'alt_increment') is 0.4286594105800721
+
+
+For suspect number 4:
+Correlation between ('activity_id', 'timestamp') is 0.9911018418997014
+Correlation between ('timestamp', 'id') is 0.9821358001063412
+Correlation between ('activity_id', 'id') is 0.9789427289652708
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.6490980231370475
+Correlation between ('gps_bearing', 'gps_speed') is 0.4682178932189435
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.36328577232869536
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.3508129645548683
+Correlation between ('gps_accuracy', 'gps_speed') is -0.32552146502823265
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.3766355173419748
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9201677922761012
+Correlation between ('bearing', 'speed') is 0.4682178932189435
+Correlation between ('accuracy', 'speed') is -0.32552146502823265
+Correlation between ('accuracy', 'bearing') is -0.3766355173419748
+Correlation between ('long', 'lat') is -0.5354265941391947
+Correlation between ('activity_id', 'long') is -0.6812687806309975
+
+
+For suspect number 5:
+Correlation between ('activity_id', 'id') is 0.9474204153142616
+Correlation between ('timestamp', 'id') is 0.9184524245237288
+Correlation between ('activity_id', 'timestamp') is 0.9136481052917658
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.7791889800123019
+Correlation between ('gps_bearing', 'gps_speed') is 0.7787195954887661
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.6172039114395913
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.5899983692858505
+Correlation between ('gps_accuracy', 'timestamp') is 0.5352653212548616
+Correlation between ('activity_id', 'gps_accuracy') is 0.436399566145072
+Correlation between ('gps_speed', 'gps_alt_increment') is 0.3894692405811442
+Correlation between ('gps_accuracy', 'id') is 0.3822818487659084
+Correlation between ('gps_long_increment', 'timestamp') is 0.35057512845355515
+Correlation between ('gps_bearing', 'gps_alt_increment') is 0.3499407810830019
+Correlation between ('activity_id', 'gps_long_increment') is 0.3113275024818243
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'long') is 0.9315120492850951
+Correlation between ('activity_id', 'lat') is 0.9188979913874057
+Correlation between ('long', 'lat') is 0.8217897814572817
+Correlation between ('bearing', 'speed') is 0.7787195954887661
+Correlation between ('accuracy', 'lat') is 0.5776217186628346
+Correlation between ('activity_id', 'accuracy') is 0.436399566145072
+Correlation between ('speed', 'alt_increment') is 0.3894692405811442
+Correlation between ('accuracy', 'long') is 0.3721664567150713
+Correlation between ('bearing', 'alt_increment') is 0.3499407810830019
+
+
+For suspect number 16:
+
+For the user's table with actual location plot points:
+
+
+For suspect number 12:
+Correlation between ('activity_id', 'timestamp') is 0.9806233034847437
+Correlation between ('timestamp', 'id') is 0.9654328815889347
+Correlation between ('activity_id', 'id') is 0.9160782438596462
+Correlation between ('gps_bearing', 'gps_speed') is 0.6690455398941839
+Correlation between ('gps_long_increment', 'gps_lat_increment') is 0.6356242341940552
+Correlation between ('gps_bearing', 'timestamp') is 0.48884044252907216
+Correlation between ('activity_id', 'gps_bearing') is 0.46657935795757877
+Correlation between ('gps_bearing', 'id') is 0.44383955459840474
+Correlation between ('gps_accuracy', 'gps_long_increment') is 0.4060491805000362
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.39588510582804026
+Correlation between ('gps_speed', 'id') is 0.38297659768014236
+Correlation between ('gps_speed', 'timestamp') is 0.3371410428931657
+Correlation between ('activity_id', 'gps_long_increment') is 0.3105481732984994
+Correlation between ('gps_accuracy', 'gps_speed') is -0.30061368011491985
+Correlation between ('gps_speed', 'gps_lat_increment') is -0.3059546146746098
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9452596962895968
+Correlation between ('bearing', 'speed') is 0.6690455398941839
+Correlation between ('activity_id', 'bearing') is 0.46657935795757877
+Correlation between ('bearing', 'lat') is 0.41018328405279897
+Correlation between ('accuracy', 'speed') is -0.30061368011491985
+
+
+For suspect number 2:
+Correlation between ('activity_id', 'id') is 0.9906076553304903
+Correlation between ('activity_id', 'timestamp') is 0.7645128536710815
+Correlation between ('timestamp', 'id') is 0.7412274516038571
+Correlation between ('gps_accuracy', 'gps_alt_increment') is 0.477672160471584
+Correlation between ('gps_alt_increment', 'gps_lat_increment') is 0.4699674880139003
+Correlation between ('gps_accuracy', 'gps_lat_increment') is 0.35793582725445255
+Correlation between ('gps_bearing', 'gps_speed') is 0.35069682984277084
+Correlation between ('gps_accuracy', 'gps_speed') is -0.3028716132846636
+Correlation between ('gps_accuracy', 'gps_bearing') is -0.46451806877346286
+
+For the user's table with actual location plot points:
+Correlation between ('activity_id', 'lat') is 0.9477807089360182
+Correlation between ('long', 'lat') is 0.7549869854543838
+Correlation between ('activity_id', 'long') is 0.7061720596347442
+Correlation between ('accuracy', 'alt_increment') is 0.477672160471584
+Correlation between ('bearing', 'speed') is 0.35069682984277084
+Correlation between ('accuracy', 'speed') is -0.3028716132846636
+Correlation between ('accuracy', 'bearing') is -0.46451806877346286
